@@ -1,5 +1,5 @@
 //toggle menu
-const selectElement = function (el) {
+const selectElement = (el) => {
   return document.querySelector(el);
 };
 
@@ -10,31 +10,36 @@ menuToggler.addEventListener("click", () => {
   body.classList.toggle("open");
 });
 
+document.addEventListener("click", (e) => {
+  if (menuToggler.contains(e.target)) return;
+  body.classList.remove("open");
+});
+
 //scroll reveal
 ScrollReveal().reveal(".animate-left", {
   origin: "left",
-  duration: 1000,
+  duration: 1500,
   distance: "25rem",
   delay: 300,
 });
 
 ScrollReveal().reveal(".animate-right", {
   origin: "right",
-  duration: 1000,
+  duration: 1500,
   distance: "25rem",
-  delay: 600,
+  delay: 300,
 });
 
 ScrollReveal().reveal(".animate-top", {
   origin: "top",
-  duration: 1000,
+  duration: 1500,
   distance: "25rem",
-  delay: 600,
+  delay: 300,
 });
 
 ScrollReveal().reveal(".animate-bottom", {
   origin: "bottom",
-  duration: 1000,
+  duration: 1500,
   distance: "25rem",
-  delay: 600,
+  delay: 300,
 });

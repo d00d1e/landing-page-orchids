@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oh My Orchids</title>
+  <title>World of Orchids</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -27,19 +28,19 @@
             <a href="index.html" class="nav-link active">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Menu</a>
+            <a href="#origin" class="nav-link">Origin</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Reservations</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">News</a>
+            <a href="#variety" class="nav-link">Variety</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Shop</a>
+            <a href="#care" class="nav-link">Care</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#shop" class="nav-link">Shop</a>
           </li>
         </ul>
       </nav>
@@ -50,7 +51,7 @@
   <section class="hero" id="hero">
     <div class="container">
       <h2 class="sub-headline">
-        <span class="first-letter">O</span>h my
+        <span class="first-letter">W</span>orld of
       <h1 class="headline">Orchids</h1>
       <div class="headline-description">
         <div class="divider">
@@ -68,10 +69,10 @@
   </section>
 
   <!-- Origins -->
-  <section class="discover-origins">
+  <section id="origin" class="discover-origins">
     <div class="container">
       <div class="orchid-info">
-        <div class="orchid-description padding-right animate-left">
+        <div class="orchid-description padding-right animate-left load-hidden">
           <div class="global-headline">
             <h2 class="sub-headline">
               <span class="first-letter">D</span>iscover
@@ -82,7 +83,7 @@
           <p>The world of orchids—with its beauty, dramatic shapes, and colors—has fascinated plant enthusiasts for centuries. These magnificent flowers first appeared nearly 200 million years ago and have since spread from the equator to the Arctic Circle and from the Himalayas to Australia. Researchers dated orchids from the Jurassic period to the Mesozoic era (195–136 million years ago) and the Cenozoic period (64 million years ago).</p>
           <a href="" class="btn body-btn">Learn More</a>
         </div>
-        <div class="orchid-info-img animate-right">
+        <div class="orchid-info-img animate-right load-hidden">
           <img src="img/origin1.png" alt="orchids in nature">
         </div>
       </div>
@@ -90,13 +91,13 @@
   </section>
 
   <!-- About -->
-  <section class="about-orchids between">
+  <section id="about" class="about-orchids between">
     <div class="container">
       <div class="global-headline">
-        <div class="animate-top">
+        <div class="animate-top load-hidden">
           <h2 class="sub-headline"><span class="first-letter">F</span>amily</h2>
         </div>
-        <div class="animate-bottom">
+        <div class="animate-bottom load-hidden">
           <h1 class="headline">Orchidaceae</h1>
         </div>
       </div>
@@ -104,16 +105,16 @@
   </section>
 
   <!-- Varieties -->
-  <section class="discover-varieties">
+  <section id="variety" class="discover-varieties">
     <div class="container">
       <div class="orchid-info">
-        <div class="image-group padding-right animate-left">
-          <img src="./img/img1.jpg" alt="">
-          <img src="./img/img2.jpg" alt="">
-          <img src="./img/img3.jpg" alt="">
-          <img src="./img/img4.jpg" alt="">
+        <div class="image-group padding-right">
+          <img class="animate-left load-hidden" src="./img/img1.jpg" alt="">
+          <img class="animate-top load-hidden" src="./img/img2.jpg" alt="">
+          <img class="animate-bottom load-hidden" src="./img/img3.jpg" alt="">
+          <img class="animate-right load-hidden" src="./img/img4.jpg" alt="">
         </div>
-        <div class="orchid-description animate-right">
+        <div class="orchid-description animate-right load-hidden">
           <div class="global-headline">
             <h2 class="sub-headline">
               <span class="first-letter">E</span>xotic
@@ -129,23 +130,23 @@
   </section>
 
   <!-- Care -->
-  <section class="orchid-care between">
+  <section id="care" class="orchid-care between">
     <div class="container">
       <div class="global-headline">
-        <div class="animate-top">
+        <div class="animate-topload-hidden ">
           <h2 class="sub-headline"><span class="first-letter">O</span>rchid</h2>
         </div>
-        <div class="animate-bottom">
-          <h1 class="headline headline-dark">Care</h1>
+        <div class="animate-bottom load-hidden">
+          <h1 class="headline">Care</h1>
         </div>
       </div>
   </section>
 
   <!-- Purchase -->
-  <section class="orchid-purchase">
+  <section id="shop" class="orchid-purchase">
     <div class="container">
       <div class="orchid-info">
-        <div class="orchid-description padding-right animate-left">
+        <div class="orchid-description padding-right animate-left load-hidden">
           <div class="global-headline">
             <h2 class="sub-headline">
               <span class="first-letter">W</span>here to
@@ -156,9 +157,10 @@
           </div>
           <a href="" class="btn body-btn">Shop</a>
         </div>
-        <div class="image-group">
-          <img class="animate-top" src="./img/purchase1.jpg" alt="">
-          <img class="animate-bottom" src="./img/hero4.jpg" alt="">
+        <div class="image-group-two">
+          <img class="animate-top load-hidden" src="./img/purchase1.jpg" alt="">
+          <img class="animate-bottom load-hidden" src="./img/purchase3.jpg" alt="">
+          <img class="animate-top load-hidden" src="./img/purchase2.jpg" alt="">
         </div>
       </div>
     </div>
@@ -171,12 +173,12 @@
         <a href="#hero"><i class="fas fa-chevron-up"></i></a>
       </div>
       <div class="footer-content">
-        <div class="footer-content-about animate-top">
+        <div class="footer-content-about animate-top load-hidden ">
           <h4>About OMO</h4>
           <div class="spa"><i class="fas fa-spa"></i></div>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit enim, quo ratione explicabo alias consectetur aspernatur. Eaque dignissimos voluptate, ea nihil dolorem, fugiat totam odio doloremque provident perspiciatis eum hic?</p>
         </div>
-        <div class="footer-content-divider animate-bottom">
+        <div class="footer-content-divider animate-bottom load-hidden">
           <div class="social-media">
             <h4>Follow us!</h4>
             <ul class="social-icons">
@@ -205,7 +207,5 @@
       </div>
     </div>
   </footer>
-
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </body>
 </html>

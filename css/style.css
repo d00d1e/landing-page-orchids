@@ -5,6 +5,7 @@
   --secondary-font: "Herr Von Muellerhoff", cursive;
   --body-font: "Cabin", sans-serif;
   --primary-font-color-dark: #252525;
+  --primary-font-color-dark-opaque: #25252599;
   --secondary-font-color: #c59d5f;
   --body-font-color: #515151;
 }
@@ -79,6 +80,11 @@ p {
   background-color: var(--secondary-font-color);
 }
 
+/* scrollreveal */
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 /*********
   NAVBAR
 **********/
@@ -111,26 +117,30 @@ header {
 
 .nav-list {
   list-style: none;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 80%;
-  height: 100vh;
-  background-color: var(--primary-font-color-dark);
+  right: 0;
+  width: 60%;
+  height: 40vh;
+  max-height: 100vh;
+  overflow: hidden;
+  /* background-color: var(--primary-font-color-dark); */
+  background-color: var(--primary-font-color-dark-opaque);
   padding: 4.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   z-index: 1250;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: transform 0.5s;
 }
 
 .nav::before {
   content: "";
+  display: block;
   position: fixed;
   top: 0;
-  left: 0;
+  left: right;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
@@ -165,7 +175,7 @@ header {
 
 .open .nav::before {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(0);
 }
 
 .nav-item {
@@ -210,6 +220,7 @@ header {
   opacity: 0;
   animation: fadeUp 0.5s forwards;
   animation-delay: 0.5s;
+  z-index: 2;
 }
 
 .first-letter {
@@ -392,12 +403,21 @@ header {
 }
 
 /*********
-  Care
+  CARE
 **********/
 .orchid-care {
-  background: url("../img/about.jpg") no-repeat center;
+  background: url("../img/care.jpg") no-repeat center;
   background-size: cover;
   /* background-position-y: 35%; */
+}
+
+/*********
+  SHOP
+**********/
+.image-group-two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
 }
 
 /*********
@@ -530,8 +550,9 @@ footer {
     transition: 0;
   }
 
+  .nav::before,
   .nav-list::before {
-    display: hidden;
+    display: none;
   }
 
   .nav-item {
@@ -609,12 +630,12 @@ footer {
   .social-media,
   .newsletter-form {
     width: 100%;
-    max-width: 27.3rem;
+    max-width: 20.3rem;
     margin: 0 1rem;
   }
 
   .newsletter-btn {
-    margin-left: 15.5rem;
+    margin-left: 13.5rem;
   }
 }
 
