@@ -10,6 +10,7 @@ menuToggler.addEventListener("click", () => {
   body.classList.toggle("open");
 });
 
+//click body/link to close menu
 document.addEventListener("click", (e) => {
   if (menuToggler.contains(e.target)) return;
   body.classList.remove("open");

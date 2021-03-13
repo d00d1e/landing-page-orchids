@@ -24,7 +24,7 @@
 html {
   font-family: var(--body-font);
   font-size: 10px;
-  color: var(--body-font);
+  color: var(--body-font-color);
   scroll-behavior: smooth;
 }
 
@@ -525,6 +525,14 @@ footer {
 /*********
   MEDIA QUERY
 **********/
+@media screen and (max-width: 899px) {
+  .nav-list,
+  .nav::before,
+  .nav-list::before {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 900px) {
   section {
     padding: 7.9rem;
