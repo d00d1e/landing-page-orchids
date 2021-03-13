@@ -27,8 +27,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
 section {
   padding: 3.9rem 0;
+  overflow: hidden;
 }
 
 img {
@@ -51,8 +57,30 @@ p {
   padding: 0 2.4rem;
 }
 
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: 0.9rem 1.8rem;
+  color: var(--body-font-color);
+  border-radius: 0.4rem;
+  transition: background-color 0.5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  color: #fff;
+  background-color: var(--secondary-font-color);
+}
+
 /*********
-  HEADER
+  NAVBAR
 **********/
 header {
   width: 100%;
@@ -67,7 +95,7 @@ header {
   height: 7.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .menu-toggle {
@@ -75,8 +103,8 @@ header {
   font-size: 2.2rem;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   right: 2.5rem;
-  transform: translateY(50%);
   cursor: pointer;
   z-index: 1500;
 }
@@ -113,7 +141,10 @@ header {
 }
 
 .logo {
-  width: 5rem;
+  /* width: 5rem; */
+  font-size: 2.2rem;
+  color: #fff;
+  left: 0;
 }
 
 .fa-times {
@@ -129,7 +160,7 @@ header {
 }
 
 .open .nav-list {
-  transform: translateX(0);.7rem
+  transform: translateX(0);
 }
 
 .open .nav::before {
@@ -161,7 +192,7 @@ header {
 .hero {
   width: 100%;
   height: 100vh;
-  background: #000 url("../img/hero4.jpg") no-repeat center;
+  background: #000 url("../img/hero2.jpg") no-repeat center;
   background-position-y: 39%;
   background-size: cover;
   display: flex;
@@ -176,11 +207,15 @@ header {
   font-weight: 100;
   line-height: 0.4;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
+  animation-delay: 0.5s;
 }
 
 .first-letter {
   text-transform: uppercase;
   font-size: 10.3rem;
+  position: relative;
 }
 
 .headline {
@@ -190,7 +225,9 @@ header {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
-  margin-right: 0.5rem
+  margin-right: 0.5rem;
+  z-index: 1;
+  animation: scale 0.5s forwards;
 }
 
 .divider {
@@ -205,16 +242,21 @@ header {
   height: 0.25rem;
   background-color: #fff;
   position: relative;
-
+  opacity: 0;
+  animation: grow 2s forwards;
+  animation-delay: 0.9s;
 }
 
 .line-left:before,
 .line-right:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border: 0.6rem solid transparent;
+  opacity: 0;
+  animation: grow 0.5s forwards;
+  animation-delay: 1.2s;
 }
 
 .line-right::before {
@@ -222,13 +264,422 @@ header {
   right: 0;
 }
 
-.line-left::before  {
+.line-left::before {
   border-left-color: #fff;
   left: 0;
 }
 
-.asterisk {
+.spa {
   font-size: 1.2rem;
   color: var(--secondary-font-color);
   margin: 0 1.6rem;
+  opacity: 0;
+  animation: spin 0.5s forwards;
+  animation-delay: 0.7s;
+}
+
+.headline-description h5 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+}
+
+.single-animation {
+  opacity: 0;
+  animation: fadeDown 2s forwards;
+  animation-delay: 1.5s;
+}
+
+/*********
+  ORIGINS
+**********/
+.global-headline {
+  text-align: center;
+  margin-top: 3.9rem;
+}
+
+.discover-origins .global-headline {
+  margin-top: 6.9rem;
+}
+
+.global-headline .spa {
+  color: var(--body-font-color);
+  margin: 2.4rem 0;
+}
+
+.headline-dark {
+  color: var(--primary-font-color-dark);
+  letter-spacing: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.global-headline .sub-headline {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
+
+.orchid-info {
+  text-align: center;
+}
+
+.orchid-description {
+  margin-bottom: 3rem;
+}
+
+.orchid-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.body-btn {
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  position: relative;
+  transition: color 0.5s;
+}
+
+.body-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-font-color);
+  transition: background-color 0.5s;
+}
+
+.body-btn:hover,
+.body-btn:focus {
+  color: var(--primary-font-color-dark);
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before {
+  background-color: var(--primary-font-color-dark);
+}
+
+/*********
+  ABOUT
+**********/
+.about-orchids {
+  background: url("../img/about4.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.between {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+}
+
+/*********
+  VARIETIES
+**********/
+.discover-varieties .orchid-description {
+  padding-top: 3rem;
+  margin-bottom: 0;
+}
+
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+/*********
+  Care
+**********/
+.orchid-care {
+  background: url("../img/about.jpg") no-repeat center;
+  background-size: cover;
+  /* background-position-y: 35%; */
+}
+
+/*********
+  FOOTER
+**********/
+footer {
+  padding: 7.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.back-to-top {
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+}
+
+.back-to-top i {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  opacity: 0;
+  animation: pointUp 2s infinite;
+}
+
+.footer-content {
+  overflow: hidden;
+}
+
+.footer-content h4 {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  /* letter-spacing: 3px; */
+  margin-bottom: 3rem;
+}
+
+.footer-content .spa {
+  margin: 2.4rem 0;
+}
+
+.footer-content-about {
+  margin-bottom: 5.4rem;
+}
+
+.footer-content-about p {
+  line-height: 2;
+}
+
+.social-icons {
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  opacity: 0.5;
+  transition: color 0.5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+  color: var(--secondary-font-color);
+}
+
+.newsletter-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input {
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.newsletter-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-font-color-dark);
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1px 0.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20.5rem;
+}
+
+/*********
+  MEDIA QUERY
+**********/
+@media screen and (min-width: 900px) {
+  section {
+    padding: 7.9rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: 0;
+  }
+
+  .nav-list::before {
+    display: hidden;
+  }
+
+  .nav-item {
+    margin: 0 2.4rem;
+    border: 0;
+  }
+
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .active {
+    position: relative;
+  }
+
+  .active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
+  .sub-headline {
+    font-size: 10rem;
+  }
+
+  .first-letter {
+    font-size: 12.2rem;
+  }
+
+  .headline {
+    font-size: 4.7rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .line {
+    max-width: 11.4rem;
+  }
+
+  .orchid-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .orchid-info > div {
+    flex: 1;
+  }
+
+  .padding-right {
+    padding-right: 7rem;
+  }
+
+  .footer-content {
+    max-width: 77.5rem;
+    margin: auto;
+  }
+
+  .footer-content-about {
+    max-width: 51.3rem;
+    margin: 0 auto 5.4rem;
+  }
+
+  .footer-content-divider {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media,
+  .newsletter-form {
+    width: 100%;
+    max-width: 27.3rem;
+    margin: 0 1rem;
+  }
+
+  .newsletter-btn {
+    margin-left: 15.5rem;
+  }
+}
+
+/*********
+  ANIMATIONS
+**********/
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pointUp {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
 }
