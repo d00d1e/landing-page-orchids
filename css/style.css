@@ -401,12 +401,20 @@ header {
 }
 
 /*********
-  ELEGANCE
+  CARE
 **********/
-.orchid-elegance {
+.care-header {
   background: url("../img/care.jpg") no-repeat center;
   background-size: cover;
   /* background-position-y: 35%; */
+}
+
+/*********
+  PURCHASE
+**********/
+.purchase {
+  background: url("../img/purchase.jpg") no-repeat center;
+  background-size: cover;
 }
 
 /*********
@@ -622,13 +630,13 @@ footer {
 
   .footer-content-divider {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .social-media,
   .newsletter-form {
     width: 100%;
-    max-width: 20.3rem;
+    max-width: 22.3rem;
     margin: 0 1rem;
   }
 
