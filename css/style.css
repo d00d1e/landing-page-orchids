@@ -376,8 +376,19 @@ header {
   ABOUT
 **********/
 .about-orchids {
+  position: relative;
   background: url("../img/about4.jpg") no-repeat center;
   background-size: cover;
+}
+
+.about-orchids:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .between {
@@ -404,17 +415,38 @@ header {
   CARE
 **********/
 .care-header {
+  position: relative;
   background: url("../img/care.jpg") no-repeat center;
   background-size: cover;
-  /* background-position-y: 35%; */
+}
+
+.care-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /*********
   PURCHASE
 **********/
 .purchase {
+  position: relative;
   background: url("../img/purchase.jpg") no-repeat center;
   background-size: cover;
+}
+
+.purchase:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /*********
