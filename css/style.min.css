@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,400&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,400&display=swap);
 :root {
   --primary-font: "Cabin", sans-serif;
   --secondary-font: "Herr Von Muellerhoff", cursive;
@@ -9,63 +8,50 @@
   --secondary-font-color: #c59d5f;
   --body-font-color: #515151;
 }
-
-/*********
-  GLOBAL
-**********/
 *,
-*::before,
-*::after {
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-family: var(--body-font);
   font-size: 10px;
   color: var(--body-font-color);
   scroll-behavior: smooth;
 }
-
 body {
   overscroll-behavior: none;
   overflow-x: hidden;
 }
-
 section {
   padding: 3.9rem 0;
   overflow: hidden;
 }
-
 img {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
-
 a {
   text-decoration: none;
 }
-
 p {
   font-size: 1.6rem;
 }
-
 .container {
   width: 100%;
   max-width: 122.5rem;
   margin: 0 auto;
   padding: 0 2.4rem;
 }
-
 .btn {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-right: -2px;
 }
-
 .cta-btn {
   font-size: 1.1rem;
   background-color: #fff;
@@ -74,21 +60,14 @@ p {
   border-radius: 0.4rem;
   transition: background-color 0.5s;
 }
-
-.cta-btn:hover,
-.cta-btn:focus {
+.cta-btn:focus,
+.cta-btn:hover {
   color: #fff;
   background-color: var(--secondary-font-color);
 }
-
-/* scrollreveal */
 html.sr .load-hidden {
   visibility: hidden;
 }
-
-/*********
-  NAVBAR
-**********/
 header {
   width: 100%;
   position: absolute;
@@ -97,14 +76,12 @@ header {
   z-index: 1;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
-
 .nav {
   height: 7.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .menu-toggle {
   color: #fff;
   font-size: 2.2rem;
@@ -115,7 +92,6 @@ header {
   cursor: pointer;
   z-index: 1500;
 }
-
 .nav-list {
   list-style: none;
   position: absolute;
@@ -133,7 +109,6 @@ header {
   z-index: 1250;
   transform: translateY(-100%);
 }
-
 .nav::before {
   content: "";
   display: block;
@@ -148,39 +123,30 @@ header {
   transform: scale(0);
   transition: opacity 0.5s;
 }
-
 .logo {
-  /* width: 5rem; */
   font-size: 2.2rem;
   color: #fff;
   left: 0;
 }
-
 .fa-times {
   display: none !important;
 }
-
 .open .fa-times {
-  display: block !important ;
+  display: block !important;
 }
-
 .open .fa-bars {
   display: none;
 }
-
 .open .nav-list {
   transform: translateX(0);
 }
-
 .open .nav::before {
   opacity: 1;
   transform: scale(0);
 }
-
 .nav-item {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
-
 .nav-link {
   display: block;
   color: #fff;
@@ -190,25 +156,19 @@ header {
   margin-right: -2px;
   transition: color 0.5s;
 }
-
 .nav-link:hover {
   color: var(--secondary-font-color);
 }
-
-/*********
-  HERO
-**********/
 .hero {
   width: 100%;
   height: 100vh;
-  background: #000 url("../img/hero2.jpg") no-repeat center;
+  background: #000 url(../img/hero2.jpg) no-repeat center;
   background-position-y: 39%;
   background-size: cover;
   display: flex;
   align-items: center;
   text-align: center;
 }
-
 .sub-headline {
   font-size: 8.5rem;
   font-family: var(--secondary-font);
@@ -221,13 +181,11 @@ header {
   animation-delay: 0.5s;
   z-index: 2;
 }
-
 .first-letter {
   text-transform: uppercase;
   font-size: 10.3rem;
   position: relative;
 }
-
 .headline {
   color: #fff;
   font-size: 3.7rem;
@@ -239,13 +197,11 @@ header {
   z-index: 1;
   animation: scale 0.5s forwards;
 }
-
 .divider {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .line {
   width: 100%;
   max-width: 10.4rem;
@@ -256,7 +212,6 @@ header {
   animation: grow 2s forwards;
   animation-delay: 0.9s;
 }
-
 .line-left:before,
 .line-right:before {
   content: "";
@@ -268,17 +223,14 @@ header {
   animation: grow 0.5s forwards;
   animation-delay: 1.2s;
 }
-
 .line-right::before {
   border-right-color: #fff;
   right: 0;
 }
-
 .line-left::before {
   border-left-color: #fff;
   left: 0;
 }
-
 .spa {
   font-size: 1.2rem;
   color: var(--secondary-font-color);
@@ -287,7 +239,6 @@ header {
   animation: spin 0.5s forwards;
   animation-delay: 0.7s;
 }
-
 .headline-description h5 {
   color: #fff;
   font-size: 1.4rem;
@@ -297,61 +248,47 @@ header {
   letter-spacing: 3px;
   margin-right: -3px;
 }
-
 .single-animation {
   opacity: 0;
   animation: fadeDown 2s forwards;
   animation-delay: 1.5s;
 }
-
-/*********
-  ORIGINS
-**********/
 .global-headline {
   text-align: center;
   margin-top: 3.9rem;
 }
-
 .discover-origins .global-headline {
   margin-top: 6.9rem;
 }
-
 .global-headline .spa {
   color: var(--body-font-color);
   margin: 2.4rem 0;
 }
-
 .headline-dark {
   color: var(--primary-font-color-dark);
   letter-spacing: 0.7rem;
   margin-right: 0.7rem;
 }
-
 .global-headline .sub-headline {
   letter-spacing: -1px;
   line-height: 0.42;
 }
-
 .orchid-info {
   text-align: center;
 }
-
 .orchid-description {
   margin-bottom: 3rem;
 }
-
 .orchid-description p {
   line-height: 1.6;
   margin-bottom: 2.4rem;
 }
-
 .body-btn {
   font-size: 1.5rem;
   color: var(--secondary-font-color);
   position: relative;
   transition: color 0.5s;
 }
-
 .body-btn::before {
   content: "";
   position: absolute;
@@ -362,26 +299,19 @@ header {
   background-color: var(--secondary-font-color);
   transition: background-color 0.5s;
 }
-
-.body-btn:hover,
-.body-btn:focus {
+.body-btn:focus,
+.body-btn:hover {
   color: var(--primary-font-color-dark);
 }
-
-.body-btn:hover::before,
-.body-btn:focus::before {
+.body-btn:focus::before,
+.body-btn:hover::before {
   background-color: var(--primary-font-color-dark);
 }
-
-/*********
-  ABOUT
-**********/
 .about-orchids {
   position: relative;
-  background: url("../img/about4.jpg") no-repeat center;
+  background: url(../img/about4.jpg) no-repeat center;
   background-size: cover;
 }
-
 .about-orchids:before {
   content: "";
   position: absolute;
@@ -391,36 +321,25 @@ header {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
 }
-
 .between {
   min-height: 65vh;
   display: flex;
   align-items: center;
 }
-
-/*********
-  VARIETIES
-**********/
 .discover-varieties .orchid-description {
   padding-top: 3rem;
   margin-bottom: 0;
 }
-
 .image-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
 }
-
-/*********
-  CARE
-**********/
 .care-header {
   position: relative;
-  background: url("../img/care.jpg") no-repeat center;
+  background: url(../img/care.jpg) no-repeat center;
   background-size: cover;
 }
-
 .care-header:before {
   content: "";
   position: absolute;
@@ -430,16 +349,11 @@ header {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
 }
-
-/*********
-  PURCHASE
-**********/
 .purchase {
   position: relative;
-  background: url("../img/purchase.jpg") no-repeat center;
+  background: url(../img/purchase.jpg) no-repeat center;
   background-size: cover;
 }
-
 .purchase:before {
   content: "";
   position: absolute;
@@ -449,19 +363,11 @@ header {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
 }
-
-/*********
-  SHOP
-**********/
 .image-group-two {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
 }
-
-/*********
-  FOOTER
-**********/
 footer {
   padding: 7.9rem 0;
   background-color: #121212;
@@ -469,7 +375,6 @@ footer {
   text-align: center;
   position: relative;
 }
-
 .back-to-top {
   width: 7rem;
   height: 7rem;
@@ -480,7 +385,6 @@ footer {
   transform: translate(-50%);
   border-radius: 50%;
 }
-
 .back-to-top i {
   display: block;
   color: #fff;
@@ -489,38 +393,30 @@ footer {
   opacity: 0;
   animation: pointUp 2s infinite;
 }
-
 .footer-content {
   overflow: hidden;
 }
-
 .footer-content h4 {
   font-size: 1.9rem;
   text-transform: uppercase;
   font-weight: 100;
-  /* letter-spacing: 3px; */
   margin-bottom: 3rem;
 }
-
 .footer-content .spa {
   margin: 2.4rem 0;
 }
-
 .footer-content-about {
   margin-bottom: 5.4rem;
 }
-
 .footer-content-about p {
   line-height: 2;
 }
-
 .social-icons {
   list-style: none;
   margin-bottom: 5.4rem;
   display: flex;
   justify-content: center;
 }
-
 .social-icons i {
   font-size: 2rem;
   color: #fff;
@@ -528,26 +424,22 @@ footer {
   opacity: 0.5;
   transition: color 0.5s;
 }
-
-.social-icons i:hover,
-.social-icons i:focus {
+.social-icons i:focus,
+.social-icons i:hover {
   color: var(--secondary-font-color);
 }
-
 .newsletter-form {
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
 }
-
 .newsletter-input {
   width: 100%;
   max-width: 25rem;
   padding: 1rem;
   border-radius: 0.4rem;
 }
-
 .newsletter-btn {
   background-color: transparent;
   border: none;
@@ -560,23 +452,16 @@ footer {
   transform: translateY(-50%);
   margin-left: 20.5rem;
 }
-
-/*********
-  MEDIA QUERY
-**********/
 @media screen and (min-width: 900px) {
   section {
     padding: 7.9rem;
   }
-
   .menu-toggle {
     display: none !important;
   }
-
   .nav {
     justify-content: space-between;
   }
-
   .nav-list {
     position: initial;
     width: initial;
@@ -588,29 +473,23 @@ footer {
     transform: initial;
     transition: 0;
   }
-
-  .nav::before,
-  .nav-list::before {
+  .nav-list::before,
+  .nav::before {
     display: none !important;
   }
-
   .nav-item {
     margin: 0 2.4rem;
     border: 0;
   }
-
   .nav-item:last-child {
     margin-right: 0;
   }
-
   .nav-link {
     font-size: 1.3rem;
   }
-
   .active {
     position: relative;
   }
-
   .active::before {
     content: "";
     position: absolute;
@@ -620,67 +499,51 @@ footer {
     left: 0;
     bottom: -3px;
   }
-
   .sub-headline {
     font-size: 10rem;
   }
-
   .first-letter {
     font-size: 12.2rem;
   }
-
   .headline {
     font-size: 4.7rem;
     letter-spacing: 0.8rem;
   }
-
   .line {
     max-width: 11.4rem;
   }
-
   .orchid-info {
     display: flex;
     align-items: center;
   }
-
   .orchid-info > div {
     flex: 1;
   }
-
   .padding-right {
     padding-right: 7rem;
   }
-
   .footer-content {
     max-width: 77.5rem;
     margin: auto;
   }
-
   .footer-content-about {
     max-width: 51.3rem;
     margin: 0 auto 5.4rem;
   }
-
   .footer-content-divider {
     display: flex;
     justify-content: space-around;
   }
-
-  .social-media,
-  .newsletter-form {
+  .newsletter-form,
+  .social-media {
     width: 100%;
     max-width: 22.3rem;
     margin: 0 1rem;
   }
-
   .newsletter-btn {
     margin-left: 13.5rem;
   }
 }
-
-/*********
-  ANIMATIONS
-**********/
 @keyframes fadeUp {
   0% {
     transform: translateY(4rem);
@@ -690,7 +553,6 @@ footer {
     transform: translateY(0);
   }
 }
-
 @keyframes scale {
   0% {
     transform: scale(2);
@@ -700,7 +562,6 @@ footer {
     transform: scale(1);
   }
 }
-
 @keyframes grow {
   0% {
     width: 0;
@@ -710,7 +571,6 @@ footer {
     width: 100%;
   }
 }
-
 @keyframes fadeDown {
   0% {
     transform: translateY(-1rem);
@@ -720,7 +580,6 @@ footer {
     transform: translateY(0);
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0);
@@ -730,7 +589,6 @@ footer {
     transform: rotate(-360deg);
   }
 }
-
 @keyframes pointUp {
   0% {
     opacity: 0;
